@@ -1,0 +1,26 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @friend.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @friend.phone %>
+</p>
+
+<p>
+  <strong>Insta:</strong>
+  <%= @friend.insta %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @friend.email %>
+</p>
+<br>
+<%= link_to 'Edit', edit_friend_path(@friend) ,class: 'btn btn-outline-warning' ,style: "padding-right:49px;border-color:transparent"%>   <br>
+<%= link_to 'Unfriend', @friend, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-outline-danger',style: "border-color:transparent;"%>
+<br><br><br>
+<%= link_to 'Back', friends_path %>
